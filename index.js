@@ -292,7 +292,7 @@ app.get('/hotels/filter/category', (req, res) => {
 });
 
 app.get('/hotels', (req, res) => {
-  let results = hotels;
+  let results = hotels.slice();
   res.json({ hotels: results });
 });
 
