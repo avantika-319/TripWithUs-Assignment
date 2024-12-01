@@ -283,7 +283,7 @@ function filterByCategory(hotelObj, category) {
   return hotelObj.category.toLowerCase() === category;
 }
 
-app.get('/hotels/filter/country', (req, res) => {
+app.get('/hotels/filter/category', (req, res) => {
   let category = req.query.category.toLowerCase();
   let results = hotels.filter((hotelObj) =>
     filterByCategory(hotelObj, category)
